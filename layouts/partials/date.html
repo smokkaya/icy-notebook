@@ -1,0 +1,24 @@
+{{ $d := . }}
+{{ $mois := dict
+  "1"  "janvier"
+  "2"  "février"
+  "3"  "mars"
+  "4"  "avril"
+  "5"  "mai"
+  "6"  "juin"
+  "7"  "juillet"
+  "8"  "août"
+  "9"  "septembre"
+  "10" "octobre"
+  "11" "novembre"
+  "12" "décembre"
+}}
+
+{{ $jour := $d | time.Format "2" }}
+{{ if eq $jour "1" }}{{ $jour = "1er" }}{{ end }}
+{{ $m := printf "%d" ($d | time.Format "1" | int) }}
+{{ $annee := $d | time.Format "2006" }}
+
+<time datetime="{{ $d | time.Format "2006-01-02" }}">
+  {{ $jour }} {{ index $mois $m }} {{ $annee }}
+</time>
