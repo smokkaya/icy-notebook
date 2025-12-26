@@ -1,4 +1,18 @@
 baseURL = 'https://smokkaya.github.io/icy-notebook/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'fr'
+title = 'Icy Notebook'
 theme = "shibui"
+enableGitInfo = true
+
+[params]
+  author = "smokkaya"
+
+[menu]
+  [[menu.main]]
+    name = "Pages"
+    url = "/pages/"
+    weight = 1
+  [[menu.main]]
+    name = "À propos"
+    url = "/à-propos/"
+    weight = 2

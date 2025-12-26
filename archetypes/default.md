@@ -1,5 +1,12 @@
-+++
-date = '{{ .Date }}'
-draft = true
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'
-+++
+---
+date: '{{ .Date }}'
+hideDate: false
+draft: true
+title: '{{ replace .File.ContentBaseName "-" " " | title }}'
+description: ""
+categories:
+  - "Journal"
+  - "Listes"
+tags:
+  - "montréal"
+---
