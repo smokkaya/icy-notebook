@@ -1,0 +1,9 @@
+.publication,
+.publication * ,
+.modification,
+.modification * {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+}
+
+
