@@ -1,6 +1,7 @@
 ---
 date: 2025-12-26
-draft: false
+jour: 1900-01-01
+draft: true
 title: "Article test"
 tags:
   - "test"

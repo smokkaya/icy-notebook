@@ -1,6 +1,9 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
-  <div class="time">{{ partial "date.html" .Date}}</div>
+{{ with .Params.jour }}
+  {{ $d := . | time }}
+  <p>{{ partial "date-long.html" $d }}</p>
+{{ end }}
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 
   {{/* Table of Contents */}}

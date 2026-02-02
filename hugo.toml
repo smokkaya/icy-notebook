@@ -3,16 +3,14 @@ languageCode = 'fr'
 title = 'Icy Notebook'
 theme = "shibui"
 enableGitInfo = true
+copyright = "© 2026 Icy Notebook"
 
 [params]
   author = "smokkaya"
 
+
 [menu]
-  [[menu.main]]
-    name = "Pages"
-    url = "/pages/"
-    weight = 1
   [[menu.main]]
     name = "À propos"
     url = "/à-propos/"
-    weight = 2
+    weight = 1

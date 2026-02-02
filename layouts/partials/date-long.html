@@ -1,0 +1,35 @@
+{{ $d := . }}
+
+{{/* Jour de la semaine */}}
+{{ $weekday := index (dict
+  "Monday"    "Lundi"
+  "Tuesday"   "Mardi"
+  "Wednesday" "Mercredi"
+  "Thursday"  "Jeudi"
+  "Friday"    "Vendredi"
+  "Saturday"  "Samedi"
+  "Sunday"    "Dimanche"
+) ($d | time.Format "Monday") }}
+
+{{/* Mois */}}
+{{ $month := index (dict
+  "01" "janvier"
+  "02" "février"
+  "03" "mars"
+  "04" "avril"
+  "05" "mai"
+  "06" "juin"
+  "07" "juillet"
+  "08" "août"
+  "09" "septembre"
+  "10" "octobre"
+  "11" "novembre"
+  "12" "décembre"
+) ($d | time.Format "01") }}
+
+{{ $day := $d | time.Format "2" }}
+{{ if eq $day "1" }}{{ $day = "1er" }}{{ end }}
+
+{{ $year := $d | time.Format "2006" }}
+
+{{ printf "%s %s %s %s" $weekday $day $month $year }}
