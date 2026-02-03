@@ -14,3 +14,11 @@ copyright = "© 2026 Icy Notebook"
     name = "À propos"
     url = "/à-propos/"
     weight = 1
+
+[[module.mounts]]
+source = 'static'
+target = 'static'
+
+[[module.mounts]]
+source = 'images'
+target = 'static/images'

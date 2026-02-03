@@ -1,10 +1,10 @@
 ---
-date: '{{ .Date }}'
-jour: '{{ .Date }}'
+date: 
+jour: 
 hideDate: false
-draft: true
+draft: false
 showDates: true
-title: '{{ replace .File.ContentBaseName "-" " " | title }}'
+title: 
 day:
 description: ""
 categories:

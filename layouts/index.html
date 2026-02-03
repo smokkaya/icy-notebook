@@ -14,9 +14,6 @@
           <span>{{ partial "date-short.html" .Date }}</span>
           <div>
             <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-            {{ if gt .Lastmod .Date }}
-              <em>(modifié le {{ .Lastmod | time.Format "02/01/2006" }})</em>
-            {{ end }}
           </div>
         </li>
       {{ end }}

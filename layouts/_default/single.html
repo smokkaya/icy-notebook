@@ -27,7 +27,7 @@
 {{ if ne .Params.showDates false }}
 
 <div class="publication">
-<p>Publié le {{ .Date | time.Format "02/01/2006 à 15h04" }}</p>
+<p>Publié le {{ .PublishDate| time.Format "02/01/2006" }}</p>
 </div>
 
 <div class="modification">
